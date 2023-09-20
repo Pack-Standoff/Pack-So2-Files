@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Standoff 2</title>
+    
+    <!-- Código de incorporação da fonte Bebas Neue -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .barra-superior {
+            background-color: Black;
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .imagem-pequena {
+            width: 135px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .imagem-direita {
+            width: 93px;
+            height: 20px;
+        }
+
+        .quadrado-preto {
+            background-color: gray;
+            height: 245px;
+            width: 110%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .botao-amarelo {
+            background-image: url('https://tinyurl.com/45eum4r7');
+            color: white;
+            padding: 3px 10px;
+            border: none;
+            border-radius: 0px;
+            width: 100px;
+            position: absolute;
+            top: 190px;
+            left: 35%;
+            transform: translateX(-50%);
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="barra-superior">
+        <img src="https://tinyurl.com/2s3dykvk" alt="Sua Nova Imagem" class="imagem-pequena">
+        <img src="https://tinyurl.com/3653ycsh" alt="imagem-direita" class="imagem-direita">
+    </div>
+
+    <div class="quadrado-preto">
+        <img src="https://tinyurl.com/2s379t55" alt="Sua Nova Imagem" style="width: 100%;">
+    </div>
+
+    <div class="quadrado-preto">
+        <img src="https://tinyurl.com/mry6a8ch" alt="Imagem Nova" width="110%" height="245px">
+        
+        <!-- Botão amarelo com link para abrir em nova aba -->
+        <a href="https://seu-link-aqui.com" target="_blank" onerror="this.href='pagina_de_erro.html'">
+            <button class="botao-amarelo" style="font-family: 'Bebas Neue', sans-serif;">VER</button>
+        </a>
+    </div>
+</body>
+</html>
