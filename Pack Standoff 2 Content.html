@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -55,7 +55,7 @@
       background-position: center;
     }
 
-    /* Estilo para o botão */
+    /* Estilo para o botão Voltar com redirecionamento */
     .botao-voltar {
       position: fixed;
       top: 70px;
@@ -63,12 +63,8 @@
       background-color: #0074d9;
       color: white;
       padding: 5px 25px;
-      border: none;
-      cursor: pointer;
+      text-decoration: none; /* Remove a formatação de link */
       font-family: 'Bebas Neue', sans-serif;
-      /* Adicionando a imagem de fundo */
-      background-image: url("https://tinyurl.com/2s3tz9wp");
-      background-size: cover;
     }
   </style>
 </head>
@@ -76,18 +72,11 @@
   <div class="top-bar">
     <img src="https://tinyurl.com/ytn4d7rh" alt="Logo" class="left-corner">
   </div>
-  <!-- Botão adicionado aqui com evento de clique -->
-  <button class="botao-voltar" onclick="voltarParaPaginaAnterior()">Voltar</button>
+  <!-- Link de voltar adicionado aqui com redirecionamento -->
+  <a class="botao-voltar" href="https://pack-standoff.vercel.app/Pack%20So2.Html">Voltar</a>
   <div class="personagem-t">Personagens</div>
   <div class="square-1">
     <!-- Conteúdo do quadrado aqui -->
   </div>
-
-  <!-- Script JavaScript para voltar para a página anterior -->
-  <script>
-    function voltarParaPaginaAnterior() {
-      window.history.back();
-    }
-  </script>
 </body>
 </html>
