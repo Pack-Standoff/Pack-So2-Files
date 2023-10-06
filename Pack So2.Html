@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Abrir Nova Aba</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Standoff 2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #4F4F4F;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .top-bar {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .top-bar img.left-corner {
+            width: 20%;
+            height: auto;
+            float: left;
+        }
+
+        @media screen and (max-width: 480px) {
+            .top-bar {
+                padding: 2%;
+            }
+
+            .top-bar img.left-corner {
+                width: 30%;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            .top-bar {
+                padding: 2%;
+            }
+
+            .top-bar img.left-corner {
+                width: 18%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <button onclick="abrirNovaAba()">Abrir Nova Aba</button>
-
-    <script>
-        function abrirNovaAba() {
-            // Abre uma nova aba com a URL desejada
-            window.open('https://pack-standoff2-content.vercel.app/Pack%20Standoff%202%20Content.html', '_blank');
-        }
-    </script>
+    <div class="top-bar">
+        <img src="https://tinyurl.com/2p8mk8dp" alt="Logo" class="left-corner">
+    </div>
 </body>
 </html>
