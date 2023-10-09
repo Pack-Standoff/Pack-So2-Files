@@ -1,0 +1,26 @@
+const users = [
+  { login: 'victor', pass: 'victor' },
+  { login: 'julio', pass: 'julio' },
+  { login: 'admin', pass: 'admin' }
+];
+
+let button = document.getElementById('btnLogar');
+
+button.addEventListener('click', function logar() {
+  let pegaUsuario = document.getElementById('usuario').value;
+  let pegaSenha = document.getElementById('senha').value;
+  let validaLogin = false;
+
+  for (let i = 0; i < users.length; i++) {
+    if (pegaUsuario === users[i].login && pegaSenha === users[i].pass) {
+      validaLogin = true;
+      break;
+    }
+  }
+
+  if (validaLogin) {
+    location.href = 'https://soundtrack-season.vercel.app/Pack%20Standoff%202%20Content.html';
+  } else {
+    alert('Nome de usuário ou senha incorretos.');
+  }
+});
