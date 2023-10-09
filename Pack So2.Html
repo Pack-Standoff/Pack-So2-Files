@@ -18,27 +18,19 @@
         .login-container {
             color: white;
             text-align: center;
-            position: relative; /* Para posicionamento relativo */
-            margin-top: 5%;
+            margin-top: 15%;
             padding: 20px;
         }
 
-        /* Estilos para o quadrado de fundo */
-        .background-square {
-            position: fixed;
-            top: 30%; /* Centralize verticalmente em relação à altura da tela */
-            left: 50%;
-            transform: translate(-50%, -50%); /* Centralize horizontal e verticalmente */
-            width: 250px; /* Tamanho desejado */
-            height: 270px; /* Tamanho desejado */
-            background-color: black; /* Cor de fundo desejada */
-            opacity: 0.80; /* Opacidade do quadrado */
-            z-index: -1; /* Coloca o quadrado atrás do conteúdo */
+        /* Altere a cor de fundo para cinza escuro */
+        body {
+            background-color: #333; /* Cor de fundo cinza escuro */
+            margin: 0; /* Remova margens para evitar espaços indesejados */
         }
 
         /* Estilos para o formulário */
         form {
-            margin-top: 0px;
+            margin-top: 20px;
             display: flex;
             flex-direction: column; /* Alinha os elementos verticalmente */
             align-items: center; /* Centraliza os elementos horizontalmente */
@@ -61,7 +53,6 @@
     </style>
 </head>
 <body>
-    <div class="background-square"></div>
     <div class="login-container">
         <h1>Login</h1>
         <form>
@@ -74,5 +65,23 @@
             <button type="submit">Entrar</button>
         </form>
     </div>
+	 <script>
+        function validarLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Verifique as credenciais (substitua com suas próprias credenciais)
+            if (username === "fabio" && password === "fabio") {
+                alert('Login bem-sucedido! Redirecionando...');
+                window.location.href = 'pagina_de_sucesso.html';
+            } else {
+                alert('Nome de usuário ou senha incorretos.');
+            }
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
 </body>
 </html>
