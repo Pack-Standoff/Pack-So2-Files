@@ -139,22 +139,7 @@
               font-family: 'Bebas Neue', sans-serif;  
               font-size: 16px;  
           }  
-             .selected-image-container {
-    text-align: center;
-    background-image: url(''); /* Deixe o URL da imagem aqui */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    left: 15%;
-             		width: 100px;
-    height: 100px;
-}
-}
-
-.selected-image {
-    width: 100px;
-    height: 100px;
-}
+           
       </style>  
   </head>  
   <body>  
@@ -188,78 +173,78 @@
     <div class="user-info">
         <p class="user-name">Nome da Pessoa</p>
     </div>
-    <div class="selected-image-container">
-        <img src="" alt="Selected Image" class="selected-image">
-    		    <div class="user-info">
-        <p class="user-name">Nome da Pessoa</p>
-    </div>
 </div>
   
  </div> 
 <script>
-    function carregarImagemSelecionada(imagem) {
-        if (imagem) {
-            var reader = new FileReader();
-
-            reader.onload = function(e) {
-                var imagemURL = e.target.result;
-
-                // Exiba a imagem escolhida na aba lateral
-                var selectedImage = document.querySelector(".selected-image");
-                selectedImage.src = imagemURL;
-
-                // Salve a imagem no armazenamento local
-                localStorage.setItem('imagemSelecionada', imagemURL);
-            };
-
-            reader.readAsDataURL(imagem);
-        }
-    }
-
-    function abrirNovaPaginaVer() {
-        window.location.href = "https://pack-standoff2-content.vercel.app/Pack%20Standoff%202%20Content.html";
-    }
-
-    function abrirNovaPaginaTabela() {
-        window.location.href = "https://soundtrack-season.vercel.app/Pack%20So2.Html";
-    }
-
-    function abrirNovaPaginaEscutar() {
-        window.location.href = "https://pack-standoff.vercel.app/Pack%20Soundtrack.html";
-    }
-
-    var botaoImagem = document.getElementById("botao-imagem");
-
-    window.addEventListener("load", carregarImagem);
-
-    function abrirAbaImagem() {
-        var inputImagem = document.createElement("input");
-        inputImagem.type = "file";
-        inputImagem.accept = "image/*";
-
-        inputImagem.addEventListener("change", function() {
-            var imagemSelecionada = inputImagem.files[0];
-
-            if (imagemSelecionada) {
-                carregarImagemSelecionada(imagemSelecionada);
-            }
-        });
-
-        inputImagem.click();
-    }
-
-    function carregarImagem() {
-        var imagemURL = localStorage.getItem('imagemSelecionada');
-
-        if (imagemURL) {
-            botaoImagem.style.backgroundImage = `url('${imagemURL}')`;
-            botaoImagem.style.backgroundSize = "cover";
-        }
-    }
-
-    botaoImagem.addEventListener("click", function() {
-        abrirAbaImagem();
-    });
+             function abrirNovaPaginaVer() {  
+          window.location.href = "https://pack-standoff2-content.vercel.app/Pack%20Standoff%202%20Content.html";  
+        }  
+          function abrirNovaPaginaTabela() {  
+          window.location.href = "https://soundtrack-season.vercel.app/Pack%20So2.Html";  
+        }  
+  
+          function abrirNovaPaginaEscutar() {  
+          window.location.href = "https://pack-standoff.vercel.app/Pack%20Soundtrack.html";  
+        }  
+  
+          var botaoImagem = document.getElementById("botao-imagem");  
+  
+          // Carregue a imagem ao carregar a página  
+          window.addEventListener("load", carregarImagem);  
+  
+          // Função para abrir a galeria de imagens  
+          function abrirAbaImagem() {  
+          var inputImagem = document.createElement("input");  
+          inputImagem.type = "file";  
+          inputImagem.accept = "image/*";  
+  
+  
+          inputImagem.addEventListener("change", function() {  
+          var imagemSelecionada = inputImagem.files[0];  
+  
+          if (imagemSelecionada) {  
+             carregarImagemSelecionada(imagemSelecionada);  
+       }  
+          });  
+  
+          // Simule um clique no elemento de input para abrir a galeria de imagens  
+          inputImagem.click();  
+      }  
+          // Função para carregar a imagem selecionada  
+          function carregarImagemSelecionada(imagem) {  
+          if (imagem) {  
+          var reader = new FileReader();  
+  
+          reader.onload = function(e) {  
+          var imagemURL = e.target.result;  
+  
+          // Exiba a imagem escolhida acima do botão  
+          botaoImagem.style.backgroundImage = `url('${imagemURL}')`;  
+          botaoImagem.style.backgroundSize = "cover";  
+  
+          // Salve a imagem no armazenamento local  
+                  localStorage.setItem('imagemSelecionada', imagemURL);  
+              };  
+  
+          reader.readAsDataURL(imagem);  
+      }  
+      }  
+  
+         // Carregue a imagem ao carregar a página  
+         function carregarImagem() {  
+         var imagemURL = localStorage.getItem('imagemSelecionada');  
+         if (imagemURL) {  
+         botaoImagem.style.backgroundImage = `url('${imagemURL}')`;  
+         botaoImagem.style.backgroundSize = "cover";  
+      }  
+      }  
+  
+         // Salve a imagem na memória local quando ela for selecionada  
+         botaoImagem.addEventListener("click", function() {  
+         abrirAbaImagem();  
+      });  
+ 
 
     function toggleSideBar() {
         var sideBar = document.getElementById("sideBar");
