@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pack So2 Conteúdo</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #1C1C1C;
-            font-family: Arial, sans-serif;
-        }
-
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+     <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Pack Standoff 2</title> 
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"> 
+     <style> 
+         body { 
+             margin: 0; 
+             padding: 0; 
+             background-color: #1C1C1C; 
+             font-family: Arial, sans-serif;
+ 	 	     }
             .top-bar { 
              background-color: black; 
              color: white; 
@@ -21,165 +20,237 @@
              position: fixed; 
              top: 0; 
              width: 100%; 
-             z-index: 1; 
-            } 
-             .top-bar img.left-corner { 
+             z-index: 3; 
+         } 
+            .top-bar img.left-corner { 
              position: absolute; 
-             left: 0%; 
-             top: 8%; 
-             width: 220px; 
-             height: 40px; 
-           }
-             .bottom-voltar { 
-             background-image: url('https://tinyurl.com/2k5kpc78'); 
+             left: 30%;
+            		text-align: center; 
+             top: 8px; 
+             width: 180px; 
+             height: 35px; 
+         } 
+            .round-button { 
+             border-radius: 50%; 
+             position: fixed; 
+             top: 7px; 
+             left: 90%;
+             width: 8%; 
+             height: 5%; 
+             background-image: url("https://tinyurl.com/mvyaksdc");
+             background-position: center;
              background-size: cover; 
+             background-color: transparent
+             background-repeat: no-repeat; 
              color: white; 
-             padding: 3px 20px; 
              border: none; 
              cursor: pointer; 
-             font-family: "Bebas Neue"; 
+             z-index: 4; 
+             
+         } 
+             #aba{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             position: absolute;
+             border: none; 
+             cursor: pointer; 
+             width: 20px; 
+             height: 20px; 
+             top: 30%;
+             left: 2%;
+             background-image: url('https://tinyurl.com/nvtuthze');
+             background-size: cover;
+             background-position: center;
+             background-color: transparent;
+          }
+            .side-bar {
+             position: fixed;
+             top: 0;
+             left: -300px; /* Inicialmente, a aba lateral estará fora da tela */
+             width: 200px;
+             height: 100%;
+             background-color: #333;
+             color: white;
+             transition: left 0.4s ease-in-out; /* Adiciona uma transição suave para o efeito de deslizamento */
+             z-index: 2;
+            }
+   
+            .square { 
+             text-align: center; 
+             margin-top: 10%; 
+         } 
+             .button-ver-container { 
+             position: absolute; 
+             top: 80%; 
+             left: 30%; 
+             transform: translate(-50%, -50%); 
+             z-index: 2; 
+         } 
+             .button-ver { 
+             background-image: url('https://tinyurl.com/2k5kpc78'); 
+             background-size: cover; 
+             background-position: center; 
+             background-color: transparent; 
+             color: white; 
+             padding: 1px 40px; 
+             border: none; 
+             cursor: pointer; 
+             font-family: 'Bebas Neue', sans-serif; 
              font-size: 16px; 
-           }
-             .table-container {
-             margin: 0 auto;
-             width: 90%;
-             padding-top: 70px;
-        }
+         } 
+             .button-see-container { 
+             position: absolute; 
+             top: 75%; 
+             left: 72%; 
+             transform: translate(-50%, -50%); 
+             z-index: 2; 
+         } 
+             .button-see { 
+             background-image: url('https://tinyurl.com/2k5kpc78'); 
+             background-size: cover; 
+             background-position: center; 
+             background-color: transparent; 
+             color: white; 
+             padding: 1px 40px; 
+             border: none; 
+             cursor: pointer; 
+             font-family: 'Bebas Neue', sans-serif; 
+             font-size: 16px; 
+         } 
+             
+             .button-escutar-container { 
+             position: absolute; 
+             top: 75%; 
+             left: 29%; 
+             transform: translate(-50%, -50%); 
+             z-index: 1; 
+         } 
+             .button-escutar { 
+             background-image: url('https://tinyurl.com/2k5kpc78'); 
+             background-size: cover; 
+             background-position: center; 
+             background-color: transparent; 
+             color: white; 
+             padding: 2px 32px; 
+             border: none; 
+             cursor: pointer; 
+             font-family: 'Bebas Neue', sans-serif; 
+             font-size: 16px; 
+         } 
+                      
+     </style> 
+ </head> 
+ <body> 
+        <div class="top-bar">
+       		<img src="https://tinyurl.com/2p8mk8dp" alt="Logo" class="left-corner">
+        <button id="aba" onclick="toggleSideBar()"></button>
+        <button id="botao-imagem" class="round-button" onclick="abrirAbaImagem()"></button> 
+        </div>
+        </div> 
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: 'Bebas Neue', sans-serif;
-            color: white;
-            background-image: url('');
-            background-size: cover;
-            
-        }
+        <div class="square" style="margin-top: 50px;"> 
+        <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;"> 
+        <img src="https://tinyurl.com/5n89bxuf" alt="imagem" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;"></div> 
+          
+        <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;"> 
+        <img src="https://tinyurl.com/yzu7f7v9" alt="imagem" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;"> 
+        <div class="button-ver-container"> 
+        <button class="button-ver" onclick="abrirNovaPaginaVer()">Ver</button></div></div> 
+          
+        <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;"> 
+        <img src="https://tinyurl.com/2s3mdupk" alt="em breve" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;">
+        <div class="button-see-container"> 
+        <button class="button-see" onclick="abrirNovaPaginaTabela()">Ver</button></div></div>
 
-         th, td {
-           border: 1px solid rgba(255, 255, 255, 0.3);
-           padding: 6px;
-           text-align: left;
-           color: white;
-           font-weight: normal; 
-        }
-
-        th {
-        background-image:
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: white;
-    }
-        }
-
-        tr:nth-child(even) {
-            background-color: #1C1C1C;
-        }
+        <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;"> 
+        <img src="https://tinyurl.com/59rb7pf6" alt="em breve" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;"> 
+        <div class="button-escutar-container"> 
+        <button class="button-escutar" onclick="abrirNovaPaginaEscutar()">Escutar</button></div></div></div> 
   
-    </style>
-</head>
-<body>
-    <div class="top-bar">
-    <img src="https://tinyurl.com/yc8jnb8p" alt="Logo" class="left-corner"></div>
-     <div class="table-container">
-        <table>
-            <tr>
-                <th colspan="2">Conteúdo</th>
-                <th class="price">Dinheiro</th>
-                <th>Golds</th>
-            </tr>
-            <tr>
-              <td style="text-align: center; padding-top: 11px;"><img src="https://tinyurl.com/mw2dytb2" alt="" style="width: 25px; height: 17px;"></td>
-              <td>Personagens</td>
-              <td>R$ 22,00</td>
-              <td>330 Golds</td>         
-            </tr>
-            <tr>
-              <td style="text-align: center; padding-top: 9px;"><img src="https://tinyurl.com/mvd3zyzb" alt="patentes" style="width: 20px; height: 20px;"></td>
-              <td>Patentes</td>
-              <td>R$ 8,00</td>
-              <td>120 Golds</td>    
-            </tr>
-            <tr>
-              <td style="text-align: center; padding-top: 9px;"><img src="https://tinyurl.com/yh74ntbe" alt="medalha veterana" style="width: 27px; height: 17px;"></td>
-              <td>Medalhas Veteranas</td>
-              <td>R$ 5,00</td>
-              <td>75 Golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 10px;"><img src="https://tinyurl.com/yh74ntbe" alt="medalha de passe" style="width: 27px; height: 17px;"></td>
-              <td>Medalhas de Passe</td>
-              <td>R$ 6,50</td>
-              <td>97,50 Golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 10px;"><img src="https://tinyurl.com/2p87hn4h" alt="adesivos" style="width: 18px; height: 18px;"></td>
-              <td>Adesivos</td>
-              <td>R$ 5,00</td>
-              <td>75 golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 10px;"><img src="https://tinyurl.com/2p87hn4h" alt="adesivos shield" style="width: 18px; height: 18px;"></td>
-              <td>Adesivos Shield</td>
-              <td>R$ 2,50</td>
-              <td>37,50 golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 10px;"><img src="https://tinyurl.com/2s4376zf" alt="grafites" style="width: 18px; height: 18px;"></td>
-              <td>grafites</td>
-              <td>R$ Free</td>
-              <td>Free</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 11px;"><img src="https://tinyurl.com/4y7hncsb" alt="Charms" style="width: 18px; height: 25px;"></td>
-              <td>Charms</td>
-              <td>R$ 3,00</td>
-              <td>45 golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 11px;"><img src="https://tinyurl.com/34n2amdw" alt="Cases" style="width: 27px; height: 17px;"></td>
-              <td>Cases</td>
-              <td>R$ 4,50</td>
-              <td>56,25 golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 12px;"><img src="https://tinyurl.com/4eytpkz3" alt="pacotes" style="width: 23px; height: 23px;"></td>
-              <td>pacotes</td>
-              <td>R$ 1,00</td>
-              <td>12,50 Golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 12px;"><img src="https://tinyurl.com/bdh7376p" alt="luvas" style="width: 23px; height: 20px;"></td>
-              <td>luvas</td>
-              <td>R$ 2,50</td>
-              <td>31,25 golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 12px;"><img src="https://tinyurl.com/5n78cvny" alt="Coins" style="width: 20px; height: 20px;"></td>
-              <td>moedas</td>
-              <td>R$ 0.50</td>
-              <td>6,25 golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 12px;"><img src="https://tinyurl.com/3534dmx5" alt="coleçoes" style="width: 18px; height: 27px;"></td>
-              <td>coleções</td>
-              <td>R$ 1,50</td>
-              <td>18,75 golds</td>
-            </tr>
-              <tr>
-              <td style="text-align: center; padding-top: 12px;"><img src="https://tinyurl.com/2zjc4w4u" alt="granadas" style="width: 16px; height: 21px;"></td>
-              <td>granadas</td>
-              <td>R$ 3,50</td>
-              <td>43,75 Golds</td>
-            </tr>
-        </table>
-          <div style="text-align: center; margin-top: 20px;">
-       <button class="bottom-voltar" onclick="voltarParaPaginaAnterior()">Voltar</button>
-    </div>
-     <script> 
-     function voltarParaPaginaAnterior() { 
-         window.history.back(); 
+        <div class="side-bar" id="sideBar">
+   
+</div>
+ <script> 
+ 		     
+         function abrirNovaPaginaVer() { 
+         window.location.href = "https://pack-standoff2-content.vercel.app/Pack%20Standoff%202%20Content.html"; 
+       } 
+         function abrirNovaPaginaTabela() { 
+         window.location.href = "https://soundtrack-season.vercel.app/Pack%20So2.Html"; 
+       } 
+
+         function abrirNovaPaginaEscutar() { 
+         window.location.href = "https://pack-standoff.vercel.app/Pack%20Soundtrack.html"; 
+       } 
+  
+         var botaoImagem = document.getElementById("botao-imagem"); 
+  
+         // Carregue a imagem ao carregar a página 
+         window.addEventListener("load", carregarImagem); 
+  
+         // Função para abrir a galeria de imagens 
+         function abrirAbaImagem() { 
+         var inputImagem = document.createElement("input"); 
+         inputImagem.type = "file"; 
+         inputImagem.accept = "image/*"; 
+  
+  
+         inputImagem.addEventListener("change", function() { 
+         var imagemSelecionada = inputImagem.files[0]; 
+  
+         if (imagemSelecionada) { 
+            carregarImagemSelecionada(imagemSelecionada); 
+      } 
+         }); 
+  
+         // Simule um clique no elemento de input para abrir a galeria de imagens 
+         inputImagem.click(); 
      } 
-     </script>
-</body>
-</html>
+         // Função para carregar a imagem selecionada 
+         function carregarImagemSelecionada(imagem) { 
+         if (imagem) { 
+         var reader = new FileReader(); 
+  
+         reader.onload = function(e) { 
+         var imagemURL = e.target.result; 
+  
+         // Exiba a imagem escolhida acima do botão 
+         botaoImagem.style.backgroundImage = `url('${imagemURL}')`; 
+         botaoImagem.style.backgroundSize = "cover"; 
+  
+         // Salve a imagem no armazenamento local 
+                 localStorage.setItem('imagemSelecionada', imagemURL); 
+             }; 
+  
+         reader.readAsDataURL(imagem); 
+     } 
+     } 
+  
+        // Carregue a imagem ao carregar a página 
+        function carregarImagem() { 
+        var imagemURL = localStorage.getItem('imagemSelecionada'); 
+        if (imagemURL) { 
+        botaoImagem.style.backgroundImage = `url('${imagemURL}')`; 
+        botaoImagem.style.backgroundSize = "cover"; 
+     } 
+     } 
+  
+        // Salve a imagem na memória local quando ela for selecionada 
+        botaoImagem.addEventListener("click", function() { 
+        abrirAbaImagem(); 
+     }); 
+
+
+function toggleSideBar() {
+    var sideBar = document.getElementById("sideBar");
+
+    if (sideBar.style.left === "0px" || sideBar.style.left === "") {
+        sideBar.style.left = "-300px"; // Fecha a aba lateral no lado esquerdo
+    } else {
+        sideBar.style.left = "0px"; // Abre a aba lateral no lado esquerdo
+    }
+}
+     </script> 
+ </body> 
+ </html>
