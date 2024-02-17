@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://pack-standoff.vercel.app/Eurostile-Reg.ttf.otf">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
 		<style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #1C1C1C;
-            font-family: Arial, sans-serif;
-           }
+        body { 
+    margin: 0; 
+    padding: 0; 
+    background-color: #1C1C1C; 
+   font-family: Arial, sans-serif; 
+  }
             @font-face {
             font-family: "Eurostile";
             src: url("https://pack-standoff.vercel.app/Eurostile-Reg.ttf.otf") format("opentype");
@@ -20,7 +20,7 @@
             .top-bar {
             background-color: black;
             color: white;
-            padding: 25px;
+            padding: 5px;
             text-align: center;
             position: fixed;
             top: 0;
@@ -33,6 +33,23 @@
             top: 8%;
             width: 220px;
             height: 40px;
+          }
+          .scrolling-wrapper {
+            display: flex;
+            overflow-x: auto;
+            justify-content: center;
+          }
+           button {
+            padding: 10px;
+            margin-right: 0px;
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;}
+              
+            button:hover {
+            background-color: transparent;
+            background-image: url("https://tinyurl.com/5n8arjep");
           }
            .square {
             text-align: center;
@@ -58,7 +75,7 @@
             background-position: left;
             background-repeat: no-repeat;
            }
-		         .patentes-c{
+		          .patentes-c{
             position: absolute;
             top: -0.70%;
             left: 3%;
@@ -253,8 +270,14 @@
 </head>
 <body>
   <div class="top-bar">
-  <img src="https://tinyurl.com/yc8jnb8p" alt="Logo" class="left-corner"></div>
-  <div class="square" style="margin-top: 22%;">
+      <div class="scrolling-wrapper">
+      <button onclick="redirecionarParaHome()">Home</button>
+      <button onclick="redirecionarParaConteudo()">Conteúdo</button>
+      <button onclick="redirecionarParaTabela()">Tabela</button>
+      <button onclick="redirecionarParaSoundtrack()">Soundtracks</button>
+      </div></div>
+  
+  <div class="square" style="margin-top: 25%;">
   <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 20px;">
   <img src="http://tinyurl.com/4exfwvcp" alt="imagem" style="width: 90%; height: 96%; object-fit: cover;" oncontextmenu="return false;">
   <div class="characters-c"></div></div>
@@ -384,11 +407,25 @@
   		<button class="bottom-voltar" onclick="voltarParaPaginaAnterior()">Voltar</button>
 </div>		
   		<script>
-    function voltarParaPaginaAnterior() {
-        window.history.back();
+    function voltarParaPaginaAnterior() { 
+    if (window.history.length > 1) {
+        window.history.back(); 
+    } else {
+        window.location.href = "https://pack-standoff.vercel.app/Pack%20So2.Html";
     }
+}
     function abrirNovaPaginaComprar() {    
         window.location.href = "https://pack-standoff.vercel.app/Tabela.html";   
+    }
+    function redirecionarParaHome() {
+    window.location.href = "https://pack-standoff.vercel.app/Pack%20So2.Html";
+    }    
+    function redirecionarParaTabela() {
+      window.location.href = "https://pack-standoff.vercel.app/Tabela.html";
+    }
+    
+    function redirecionarParaSoundtrack() {
+    window.location.href = "https://pack-standoff.vercel.app/Pack%20Soundtrack.html";
     }
       </script>
 </body>
