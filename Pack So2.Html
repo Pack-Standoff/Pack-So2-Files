@@ -188,25 +188,33 @@
 
         carregarImagemAleatoria();
     
-      function logar() {
-    var login = document.getElementById('login').value;
-    var senha = document.getElementById('senha').value;
+function logar() {
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
 
-    // Substitua com suas próprias credenciais
-    var usuarioCorreto = 'seuUsuario';
-    var senhaCorreta = 'suaSenha';
+        // Substitua com suas próprias credenciais
+        var usuarioCorreto = 'seuUsuario';
+        var senhaCorreta = 'suaSenha';
 
-    if (login === usuarioCorreto && senha === senhaCorreta) {
-        alert('Login bem-sucedido!');
-        localStorage.setItem('usuarioLogado', 'true'); // Armazena indicador de login
-        window.location.href = "/Pack%20So2.html";
-    } else {
-        alert('Login falhou. Verifique suas credenciais.');
+        if (login === usuarioCorreto && senha === senhaCorreta) {
+            alert('Login bem-sucedido!');
+            localStorage.setItem('usuarioLogado', 'true'); // Armazena indicador de login
+            window.location.href = "/https://soundtrack-season.vercel.app/Pack%20So2.Html";
+        } else {
+            alert('Login falhou. Verifique suas credenciais.');
+        }
     }
-}
-if (localStorage.getItem('usuarioLogado') === 'true') {
-    ocultarBotaoLoginNaHome();
-}
+
+    function ocultarBotaoLoginNaHome() {
+        var botaoLogin = document.querySelector('.top-bar button:last-child');
+        if (botaoLogin) {
+            botaoLogin.style.display = 'none';
+        }
+    }
+
+    if (localStorage.getItem('usuarioLogado') === 'true') {
+        ocultarBotaoLoginNaHome();
+    }
 </script>
   </body>  
 </html>
