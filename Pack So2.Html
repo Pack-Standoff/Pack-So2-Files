@@ -1,106 +1,34 @@
-<!DOCTYPE html>  
-  <html>  
-  <head>  
-      <meta charset="UTF-8">  
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-      <title>Pack Standoff 2</title>  
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">  
-      <style>  
-          body {  
-            margin: 0;  
-            padding: 0;  
-            background-color: #1C1C1C;  
-            background-image: 
-            font-family: Arial, sans-serif;} 
-    .top-bar {  
-      background-color: black;
-      color: white;  
-      padding: 5px;  
-      text-align: center;  
-      position: fixed;  
-      top: 0;  
-      width: 100%;  
-      z-index: 3;
-    }  
-    .top-bar img.left-corner {  
-      position: absolute;  
-      center: fixed;
-      top: 8px;  
-      width: 180px;  
-      height: 35px;
-      left: 50%;
-      transform: translateX(-50%); 
-     }  
-    .logo {
-      position: fixed;
-      top: 10%; 
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100px; 
-      height: auto; 
-      z-index: 1; 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Standoff 2 SoundTrack</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1C1C1C;
+      font-family: Arial, sans-serif;
     }
-    .square {  
-      text-align: center;  
-      margin-top: 10%;  
-    }  
-    .button-ver-container {  
-      position: absolute;  
-      top: 80%;  
-      left: 30%;  
-      transform: translate(-50%, -50%);  
-      z-index: 2;  
-    }  
-    .button-ver {  
-      background-image: url('https://tinyurl.com/2k5kpc78');  
-      background-size: cover;  
-      background-position: center;  
-      background-color: transparent;  
-      color: white;  
-      padding: 1px 40px;  
-      border: none;  
-      cursor: pointer;  
-      font-family: 'Bebas Neue', sans-serif;  
-      font-size: 16px;  
-    }  
-    .button-see-container {  
-      position: absolute;  
-      top: 75%;  
-      left: 72%;  
-      transform: translate(-50%, -50%);  
-      z-index: 2;  
-    }  
-    .button-see {  
-      background-image: url('https://tinyurl.com/2k5kpc78');  
-      background-size: cover;  
-      background-position: center;  
-      background-color: transparent;  
-      color: white;  
-      padding: 1px 40px;  
-      border: none;  
-      cursor: pointer;  
-      font-family: 'Bebas Neue', sans-serif;  
-      font-size: 16px;  
-    }  
-    .button-escutar-container {  
-      position: absolute;  
-      top: 75%;  
-      left: 29%;  
-      transform: translate(-50%, -50%);  
-      z-index: 1;  
-    }  
-    .button-escutar {  
-      background-image: url('https://tinyurl.com/2k5kpc78');  
-      background-size: cover;  
-      background-position: center;  
-      background-color: transparent;  
-      color: white;  
-      padding: 2px 32px;  
-      border: none;  
-      cursor: pointer;  
-      font-family: 'Bebas Neue', sans-serif;  
-      font-size: 16px;  
-    }  
+    .top-bar {
+      background-color: black;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    .top-bar img.left-corner {
+      position: absolute;
+      left: 0%;
+      top: 8%;
+      width: 220px;
+      height: 40px;
+    }
     .scrolling-wrapper {
       display: flex;
       overflow-x: auto;
@@ -112,111 +40,252 @@
       background-color: transparent;
       border: none;
       color: white;
-      cursor: pointer;}
-              
+      cursor: pointer;
+    }
     button:hover {
       background-color: transparent;
-      background-image: url("https://tinyurl.com/5n8arjep");
+      background-image: url("http://tinyurl.com/4868vxyx");
     }
-    </style>  
-</head>  
-  <body>  
-    <div class="top-bar">
-      <div class="scrolling-wrapper">
-      <button onclick="redirecionarParaHome()">Home</button>
-      <button onclick="redirecionarParaConteudo()">Conteúdo</button>
-      <button onclick="redirecionarParaTabela()">Tabela</button>
-      <button onclick="redirecionarParaSoundtrack()">Soundtracks</button>
-      <button onclick="BotaoLoginNaHome()">Login</button>
-      </div>
+    .square {
+      margin-top: 30px;
+      margin-left: 5%;
+    }
+    .season-text {
+      background-color: transparent;
+      border: none;
+      color: white;
+      padding: 15px 0px;
+      font-size: 22px;
+      cursor: pointer;
+      border-radius: 0px;
+      font-family: 'Bebas Neue', sans-serif;
+      margin-bottom: -15px;
+      background-image: url("https://tinyurl.com/2k5kpc78");
+      max-width: 95%;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .audio {
+      display: none;
+    }
+    img {
+      max-width: 95%;
+      height: auto;
+      text-align: center;
+      border: 0.1px solid #555;
+    }
+     .escutar-button {
+      background-color: transparent;
+      border: none;
+      color: white; 
+      padding: 3px;
+      font-size: 13px;
+      cursor: pointer;
+      border-radius: 0px;
+      width: 100%;
+      font-family: 'Bebas Neue', sans-serif;
+      margin-bottom: -25px;
+      margin: 0 auto;
+     }
+     .pause-button {
+      background-color: transparent;
+      border: none;
+      color: white; 
+      padding: 3px;
+      font-size: 13px;
+      cursor: pointer;
+      border-radius: 0px;
+      width: 100%;
+      font-family: 'Bebas Neue', sans-serif;
+      margin-bottom: -25px;
+      margin: 0 auto;
+     }
+     
+     .buttom-voltar {
+     		background-image: url('http://tinyurl.com/5n75dkx2');
+     		background-size: cover;
+     		color: white;
+     		padding: 3px 27px;
+     		border: none;
+     		cursor: pointer;
+     		font-family: "Bebas Neue";
+     		font-size: 13px
+     }
+      #opcoesFiltro {
+       display: none;
+       position: absolute;
+       width: 100%;
+      }
+     #filtro-icon {
+       width: 17px;
+       height: 17px;
+       position: absolute;
+       margin-top: 3.5px;
+       margin-left: -30%;
+       border: none;
+     }
+    .filter-button {
+     		background-size: cover;
+      background-color: rgba(17, 17, 17, 0.7);
+     		color: white;
+     		padding: 3px 25px;
+     		border: 0.1px solid #888;
+     		cursor: pointer;
+     		font-family: "Bebas Neue";
+     		font-size: 13px
+      display: inline-block;
+      width: 100px;
+      
+     }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="scrolling-wrapper">
+     <button onclick="redirecionarParaHome()">Home</button>
+     <button onclick="redirecionarParaConteudo()">Conteúdo</button>
+     <button onclick="redirecionarParaTabela()">Tabela</button>
+     <button onclick="redirecionarParaSoundtrack()">Soundtracks</button>
+    </div></div>
+<div class="square">
+  <div style=" margin-top: 35px; margin-left: 66%; position: absolute;">
+    <img id="filtro-icon" src="http://tinyurl.com/2ssayunk" alt="Imagem de filtro"><button class="filter-button" onclick="toggleFiltro()">Filtrar</button>
+    <div id="opcoesFiltro" style="display: none;">
+      <button class="filter-button" onclick="filtrarPorOpcao('Todas')">todas</button>
+      <button class="filter-button" onclick="filtrarPorOpcao('Seasons')">Seasons</button>
+      <button class="filter-button" onclick="filtrarPorOpcao('Eventos')">Eventos</button>
+    </div>
   </div>
-    <div class="square" style="margin-top: 60px;">  
-      <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 10px;">  
-         <img src="http://tinyurl.com/zeduk4ye" alt="imagem" style="width: 70%; height: 70%; object-fit: cover;" oncontextmenu="return false;"></div>  
+
+      
+    <p class="season-text">Season 1 </p>
+    <img src="http://tinyurl.com/7fys6ucm"></div>
+    <div style="text-align: center; margin-top: 0px;">
+    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(1)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
+    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
+    </div>
+    
+    <div class="square">
+    <p class="season-text">Season 2</p>
+    <img src="http://tinyurl.com/yt5t4n2y"></div>
+    <div style="text-align: center; margin-top: 0px;">
+    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(2)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
+    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
+    </div>
+    
+    <div class="square">
+    <p class="season-text">Season 3</p>
+    <img src="http://tinyurl.com/ms5f65su"></div>
+    <div style="text-align: center; margin-top: 0px;">
+    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(3)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
+    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
+    </div>
   
-      <div class="square" style="margin-top: 0px;">  
-         <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;">  
-         <img src="https://tinyurl.com/5n89bxuf" alt="imagem" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;"></div>  
+    <div class="square">
+    <p class="season-text">Season 4</p>
+    <img src="http://tinyurl.com/yfhxfb8s"></div>
+    <div style="text-align: center; margin-top: 0px;">
+    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(4)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
+    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
+    </div>
   
-         <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;">  
-         <img id="imagemAleatoria" src="http://tinyurl.com/4sbrtakv" alt="imagem" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;">
-           <div class="button-ver-container">  
-         <button class="button-ver" onclick="abrirNovaPaginaVer()">Ver</button></div></div>  
+    <div class="square">
+    <p class="season-text">Season 5</p>
+    <img src="http://tinyurl.com/4kyarv8h"></div>
+    <div style="text-align: center; margin-top: 0px;">
+    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(5)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
+    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
+    </div>
   
-         <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;">  
-         <img src="http://tinyurl.com/2s3mdupk" alt="em breve" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;"> 
-         <div class="button-see-container">  
-         <button class="button-see" onclick="abrirNovaPaginaTabela()">Ver</button></div></div> 
+    <div class="square">
+    <p class="season-text">Season 6</p>
+    <img src="http://tinyurl.com/ye295yzj"></div>
+    <div style="text-align: center; margin-top: 0px;">
+    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(6)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
+    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
+    </div>
   
-         <div style="width: 100%; height: 100%; background-color: transparent; position: relative; margin-bottom: 18px;">  
-         <img src="http://tinyurl.com/59rb7pf6" alt="em breve" style="width: 100%; height: 100%; object-fit: cover;" oncontextmenu="return false;">  
-         <div class="button-escutar-container">  
-         <button class="button-escutar" onclick="abrirNovaPaginaEscutar()">Escutar</button></div></div></div>  
-  
- </div> 
+    <div style="text-align: center; margin-top: 18px;">
+   		<button class="buttom-voltar" onclick="voltarParaPaginaAnterior()">Voltar</button> 
+    </div>
+
+       
+     <audio class="audio" id="audio1" src="https://soundtrack-season.vercel.app/Standoff%202%20Soundtrack%202Years%20(MP3_160K).mp3%" controls></audio>
+     <audio class="audio" id="audio2" src="https://pack-standoff.vercel.app/Revival%20Season%202%20SoundTrack.mp3"></audio>
+     <audio class="audio" id="audio3" src="https://pack-standoff.vercel.app/Dragon%20Rise%20Season%203%20SoundTrack.mp3" controls></audio>
+     <audio class="audio" id="audio4" src="https://pack-standoff.vercel.app/Legends%20Season%204%20SoundTrack.mp3"></audio>
+     <audio class="audio" id="audio5" src="https://pack-standoff.vercel.app/Fireborn%20Season%205%20SoundTrack.mp3"></audio>
+     <audio class="audio" id="audio6" src="https://pack-standoff.vercel.app/Dune%20(Season%206%20Loading)%20-%20Standoff%202%20OST(MP3_160K).mp3"></audio>
+
 <script>
-    function abrirNovaPaginaVer() {
-      window.location.href = "https://pack-standoff2-content.vercel.app/Pack%20Standoff%202%20Content.html";
+  
+    function voltarParaPaginaAnterior() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "https://pack-standoff.vercel.app/Pack%20So2.Html";
+      }
     }
 
-    function abrirNovaPaginaTabela() {
-      window.location.href = "https://pack-standoff.vercel.app/Tabela.html";
+    function redirecionarParaHome() {
+      window.location.href = "https://pack-standoff.vercel.app/Pack%20So2.Html";
     }
 
-    function abrirNovaPaginaEscutar() {
-      window.location.href = "https://pack-standoff.vercel.app/Pack%20Soundtrack.html";
-    }  
     function redirecionarParaConteudo() {
-    window.location.href = "https://pack-standoff2-content.vercel.app/Pack%20Standoff%202%20Content.html";
-    }    
+      window.location.href = "https://pack-standoff.vercel.app/Conte%C3%BAdo.html";
+    }
+
     function redirecionarParaTabela() {
       window.location.href = "https://pack-standoff.vercel.app/Tabela.html";
     }
     
-    function redirecionarParaSoundtrack() {
-    window.location.href = "https://pack-standoff.vercel.app/Pack%20Soundtrack.html";
-    }
-      function carregarImagemAleatoria() {
-            var imagemAleatoriaElement = document.getElementById('imagemAleatoria');
-            imagemAleatoriaElement.src = imagesArray[Math.floor(Math.random() * imagesArray.length)];
-        }
+     var currentAudio = null;
+         var audioToPause = null;
 
-        var imagesArray = [
-            "https://tinyurl.com/4sbrtakv",  // URL da Imagem 1
-            "https://tinyurl.com/4vbj5ce8"   // URL da Imagem 2
-        ];
+         function playAudio(audioNumber) {
+         var audio = document.getElementById("audio" + audioNumber);
+           
+         if (currentAudio !== null && currentAudio !== audio) {
+         currentAudio.pause();
+         currentAudio.currentTime = 0;
+       }
+         if (audio.paused) {
+         audio.play();
+         currentAudio = audio;
+         audioToPause = audio;
+       } else {
+         audio.pause();
+         audio.currentTime = 0;
+         currentAudio = null;
+       }
+       }
 
-        carregarImagemAleatoria();
-    
-function logar() {
-    var login = document.getElementById('login').value;
-    var senha = document.getElementById('senha').value;
-
-    // Substitua com suas próprias credenciais
-    var usuarioCorreto = 'seuUsuario';
-    var senhaCorreta = 'suaSenha';
-
-    if (login === usuarioCorreto && senha === senhaCorreta) {
-        alert('Login bem-sucedido!');
-        localStorage.setItem('usuarioLogado', 'true'); // Armazena indicador de login
-        ocultarBotaoLoginNaHome();
-        window.location.href = "/https://soundtrack-season.vercel.app/Pack%20So2.Html";
-    } else {
-        alert('Login falhou. Verifique suas credenciais.');
-    }
-
-
-    function ocultarBotaoLoginNaHome() {
-    var botaoLogin = document.querySelector('.top-bar button:last-child');
-    if (botaoLogin) {
-        botaoLogin.style.display = 'none';
-    }
-     
+        function pauseAudio() {
+        if (audioToPause !== null) {
+        audioToPause.pause();
+        audioToPause.currentTime = 0;
+        currentAudio = null;
+        audioToPause = null;
+      }
+      }
+        document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+        function hoverSeason(element) {
+        element.style.backgroundImage = "url('http://tinyurl.com/4868vxyx')";
     }
 
-    if (localStorage.getItem('usuarioLogado') === 'true') {
-        ocultarBotaoLoginNaHome();
+    function unhoverSeason(element) {
+        element.style.backgroundImage = "url('http://tinyurl.com/5n75dkx2')";
     }
-</script>
-  </body>  
+    function toggleFiltro() {
+  var opcoesFiltro = document.getElementById("opcoesFiltro");
+  if (opcoesFiltro.style.display === "none" || opcoesFiltro.style.display === "") {
+    opcoesFiltro.style.display = "block";
+  } else {
+    opcoesFiltro.style.display = "none";
+  }
+}
+  </script>
+</body>
 </html>
