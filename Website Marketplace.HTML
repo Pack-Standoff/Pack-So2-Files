@@ -13,8 +13,21 @@
             background-attachment: fixed;
             color: white;
         }
+         .logo-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+     
+}
+
+.logo-container img {
+    max-width: 50%;
+    height: auto;
+    
+
+        }
         .search-container {
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             text-align: left;
         }
         #searchInput {
@@ -27,13 +40,13 @@
             color: white;
         }
         .filter-container {
-            margin-top: 20px;
+            margin-top: 0px;
             text-align: left;
         }
         #filterButton {
     background-color: #7c9bce;
     color: white;
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -153,8 +166,8 @@
         .rarity-uncommon-legend {
             background-color: #71aada;
         }
-        .rarity-ultra-legend {
-            background-color: #ff00ff; /* Cor de fundo para Fragmento Ultra */
+        .rarity-Comum {
+            background-color: gray; /* Cor de fundo para Fragmento Ultra */
         }
         .legend-text {
             color: white;
@@ -164,6 +177,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+      <div class="logo-container">
+        <img src="https://tinyurl.com/5xy6u5un" alt="Logo do Meu Site">
+    </div>
+    
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar item..." onkeyup="filterItems()">
     </div>
