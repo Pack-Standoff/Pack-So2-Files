@@ -171,7 +171,7 @@
     <div class="filter-container">
         <button id="filterButton">Filtro</button>
         <div id="filterOptions" class="filter-options">
-            <div class="filter-option"onclick="redirectTo('fragmentos')">
+            <div class="filter-option"onclick="redirecionarParaFragmentos()">
                 <img src="https://tinyurl.com/mrxver46" alt="Ícone 1" class="filter-icon">
                 <span>Fragments</span>
             </div>
@@ -698,10 +698,9 @@
         const filterOptions = document.getElementById('filterOptions');
         filterOptions.style.display = filterOptions.style.display === 'none' || !filterOptions.style.display ? 'block' : 'none';
     });
-     function redirectTo(category) {
-    var baseUrl = "url";
-    window.location.href = baseUrl + category;
-}
+     function redirecionarParaFragmentos() {
+    window.location.href = "https://soundtrack-season.vercel.app/Website%20Marketplace%20Fragment.HTML";
+    }
 </script>
 </body>
 </html>
