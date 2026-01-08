@@ -1,291 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pack Standoff 2 SoundTrack</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #1C1C1C;
-      font-family: Arial, sans-serif;
-    }
-    .top-bar {
-      background-color: black;
-      color: white;
-      padding: 5px;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-    }
-    .top-bar img.left-corner {
-      position: absolute;
-      left: 0%;
-      top: 8%;
-      width: 220px;
-      height: 40px;
-    }
-    .scrolling-wrapper {
-      display: flex;
-      overflow-x: auto;
-      justify-content: center;
-    }
-    button {
-      padding: 10px;
-      margin-right: 0px;
-      background-color: transparent;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: transparent;
-      background-image: url("http://tinyurl.com/4868vxyx");
-    }
-    .square {
-      margin-top: 30px;
-      margin-left: 5%;
-    }
-    .season-text {
-      background-color: transparent;
-      border: none;
-      color: white;
-      padding: 15px 0px;
-      font-size: 22px;
-      cursor: pointer;
-      border-radius: 0px;
-      font-family: 'Bebas Neue', sans-serif;
-      margin-bottom: -15px;
-      background-image: url("https://tinyurl.com/2k5kpc78");
-      max-width: 95%;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .audio {
-      display: none;
-    }
-    img {
-      max-width: 95%;
-      height: auto;
-      text-align: center;
-      border: 0.1px solid #555;
-    }
-     .escutar-button {
-      background-color: transparent;
-      border: none;
-      color: white; 
-      padding: 3px;
-      font-size: 13px;
-      cursor: pointer;
-      border-radius: 0px;
-      width: 100%;
-      font-family: 'Bebas Neue', sans-serif;
-      margin-bottom: -25px;
-      margin: 0 auto;
-     }
-     .pause-button {
-      background-color: transparent;
-      border: none;
-      color: white; 
-      padding: 3px;
-      font-size: 13px;
-      cursor: pointer;
-      border-radius: 0px;
-      width: 100%;
-      font-family: 'Bebas Neue', sans-serif;
-      margin-bottom: -25px;
-      margin: 0 auto;
-     }
-     
-     .buttom-voltar {
-     		background-image: url('http://tinyurl.com/5n75dkx2');
-     		background-size: cover;
-     		color: white;
-     		padding: 3px 27px;
-     		border: none;
-     		cursor: pointer;
-     		font-family: "Bebas Neue";
-     		font-size: 13px
-     }
-      #opcoesFiltro {
-       display: none;
-       position: absolute;
-       width: 100%;
-      }
-     #filtro-icon {
-       width: 17px;
-       height: 17px;
-       position: absolute;
-       margin-top: 3.5px;
-       margin-left: -30%;
-       border: none;
-     }
-    .filter-button {
-     		background-size: cover;
-      background-color: rgba(17, 17, 17, 0.7);
-     		color: white;
-     		padding: 3px 25px;
-     		border: 0.1px solid #888;
-     		cursor: pointer;
-     		font-family: "Bebas Neue";
-     		font-size: 13px
-      display: inline-block;
-      width: 100px;
-      
-     }
-  </style>
-</head>
-<body>
-  <div class="top-bar">
-    <div class="scrolling-wrapper">
-     <button onclick="redirecionarParaHome()">Home</button>
-     <button onclick="redirecionarParaConteudo()">Conteúdo</button>
-     <button onclick="redirecionarParaTabela()">Tabela</button>
-     <button onclick="redirecionarParaSoundtrack()">Soundtracks</button>
-    </div></div>
-<div class="square">
-  <div style=" margin-top: 35px; margin-left: 66%; position: absolute;">
-    <img id="filtro-icon" src="http://tinyurl.com/2ssayunk" alt="Imagem de filtro"><button class="filter-button" onclick="toggleFiltro()">Filtrar</button>
-    <div id="opcoesFiltro" style="display: none;">
-      <button class="filter-button" onclick="filtrarPorOpcao('Todas')">todas</button>
-      <button class="filter-button" onclick="filtrarPorOpcao('Seasons')">Seasons</button>
-      <button class="filter-button" onclick="filtrarPorOpcao('Eventos')">Eventos</button>
-    </div>
-  </div>
+<meta charset="UTF-8">
+<title>Demonstrativo de Pagamento</title>
 
-      
-    <p class="season-text">Season 1 </p>
-    <img src="http://tinyurl.com/7fys6ucm"></div>
-    <div style="text-align: center; margin-top: 0px;">
-    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(1)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
-    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
-    </div>
-    
-    <div class="square">
-    <p class="season-text">Season 2</p>
-    <img src="http://tinyurl.com/yt5t4n2y"></div>
-    <div style="text-align: center; margin-top: 0px;">
-    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(2)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
-    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
-    </div>
-    
-    <div class="square">
-    <p class="season-text">Season 3</p>
-    <img src="http://tinyurl.com/ms5f65su"></div>
-    <div style="text-align: center; margin-top: 0px;">
-    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(3)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
-    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
-    </div>
-  
-    <div class="square">
-    <p class="season-text">Season 4</p>
-    <img src="http://tinyurl.com/yfhxfb8s"></div>
-    <div style="text-align: center; margin-top: 0px;">
-    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(4)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
-    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
-    </div>
-  
-    <div class="square">
-    <p class="season-text">Season 5</p>
-    <img src="http://tinyurl.com/4kyarv8h"></div>
-    <div style="text-align: center; margin-top: 0px;">
-    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(5)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
-    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
-    </div>
-  
-    <div class="square">
-    <p class="season-text">Season 6</p>
-    <img src="http://tinyurl.com/ye295yzj"></div>
-    <div style="text-align: center; margin-top: 0px;">
-    <button class="escutar-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="playAudio(6)" style="width: 35%; margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;">Escutar</button>
-    <button class="pause-button" onmouseover="hoverSeason(this)" onmouseout="unhoverSeason(this)" onclick="pauseAudio()"style="width: 35%;  margin-top: 5px; background-image: url('http://tinyurl.com/5n75dkx2');background-size: cover;"> Pause</button>	
-    </div>
-  
-    <div style="text-align: center; margin-top: 18px;">
-   		<button class="buttom-voltar" onclick="voltarParaPaginaAnterior()">Voltar</button> 
-    </div>
-
-       
-     <audio class="audio" id="audio1" src="https://pack-standoff.vercel.app/Standoff%202%20Soundtrack%202Years%20(MP3_160K).mp3" controls></audio>
-     <audio class="audio" id="audio2" src="https://pack-standoff.vercel.app/Revival%20Season%202%20SoundTrack.mp3"></audio>
-     <audio class="audio" id="audio3" src="https://pack-standoff.vercel.app/Dragon%20Rise%20Season%203%20SoundTrack.mp3" controls></audio>
-     <audio class="audio" id="audio4" src="https://pack-standoff.vercel.app/Legends%20Season%204%20SoundTrack.mp3"></audio>
-     <audio class="audio" id="audio5" src="https://pack-standoff.vercel.app/Fireborn%20Season%205%20SoundTrack.mp3"></audio>
-     <audio class="audio" id="audio6" src="https://pack-standoff.vercel.app/Dune%20(Season%206%20Loading)%20-%20Standoff%202%20OST(MP3_160K).mp3"></audio>
-
-<script>
-  
-    function voltarParaPaginaAnterior() {
-      if (window.history.length > 1) {
-        window.history.back();
-      } else {
-        window.location.href = "https://pack-standoff.vercel.app/Pack%20So2.Html";
-      }
-    }
-
-    function redirecionarParaHome() {
-      window.location.href = "https://pack-standoff.vercel.app/Pack%20So2.Html";
-    }
-
-    function redirecionarParaConteudo() {
-      window.location.href = "https://pack-standoff.vercel.app/Conte%C3%BAdo.html";
-    }
-
-    function redirecionarParaTabela() {
-      window.location.href = "https://pack-standoff.vercel.app/Tabela.html";
-    }
-    
-     var currentAudio = null;
-         var audioToPause = null;
-
-         function playAudio(audioNumber) {
-         var audio = document.getElementById("audio" + audioNumber);
-           
-         if (currentAudio !== null && currentAudio !== audio) {
-         currentAudio.pause();
-         currentAudio.currentTime = 0;
-       }
-         if (audio.paused) {
-         audio.play();
-         currentAudio = audio;
-         audioToPause = audio;
-       } else {
-         audio.pause();
-         audio.currentTime = 0;
-         currentAudio = null;
-       }
-       }
-
-        function pauseAudio() {
-        if (audioToPause !== null) {
-        audioToPause.pause();
-        audioToPause.currentTime = 0;
-        currentAudio = null;
-        audioToPause = null;
-      }
-      }
-        document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
-        function hoverSeason(element) {
-        element.style.backgroundImage = "url('http://tinyurl.com/4868vxyx')";
-    }
-
-    function unhoverSeason(element) {
-        element.style.backgroundImage = "url('http://tinyurl.com/5n75dkx2')";
-    }
-    function toggleFiltro() {
-  var opcoesFiltro = document.getElementById("opcoesFiltro");
-  if (opcoesFiltro.style.display === "none" || opcoesFiltro.style.display === "") {
-    opcoesFiltro.style.display = "block";
-  } else {
-    opcoesFiltro.style.display = "none";
-  }
+<style>
+    /* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-  </script>
+
+/* BODY */
+body {
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    -webkit-font-smoothing: none;
+    text-rendering: geometricPrecision;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    width: 1000px;
+    margin: 20px auto;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* TÍTULO */
+.titulo {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* TABELAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* CÉLULAS */
+td, th {
+    border: 2px solid #000;
+    padding: 6px 8px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+/* TEXTOS */
+.bold {
+    font-weight: 1000;
+    border: 2px solid #000;
+    
+    
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+/* TABELA DE LANÇAMENTOS */
+.tabela-lancamentos th {
+    font-weight: 700;
+    background: #ffffff;
+}
+
+/* REMOVER BORDAS LATERAIS EM TOTAIS */
+.totais td {
+    border-left: none;
+    border-right: none;
+}
+
+/* DESTAQUE LÍQUIDO */
+.liquido {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* BASES (FGTS / INSS / IRRF) */
+.base table td {
+    border-left: none;
+    border-right: none;
+}
+
+/* RODAPÉ */
+.rodape {
+    margin-top: 30px;
+    border: 2px solid #000;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* LINK (IGUAL PDF – PRETO) */
+.link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* IMPRESSÃO (A4 PERFEITA) */
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    td, th {
+        border: 2px solid #000;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="titulo">Demonstrativo de Pagamento</div>
+
+    <table>
+        <tr><td colspan="4">Empresa: GR SERVICOS E ALIMENTACAO LTDA</td></tr>
+        <tr>
+            <td colspan="2">Endereço: R WERNER VON SIEMENS 111</td>
+            <td colspan="2">CNPJ: 02.905.110/0001-28</td>
+        </tr>
+        <tr>
+            <td>Crédito: 02/01/2026</td>
+            <td colspan="3">BANCO/AGÊNCIA/CONTA: 2372282627305</td>
+        </tr>
+        <tr><td colspan="4">Referência: DEZEMBRO / 2025 (FOLHA)</td></tr>
+        <tr>
+            <td colspan="2">Nome: Ruan Pablo Souza Teles</td>
+            <td colspan="2">Matrícula: 481337</td>
+        </tr>
+        <tr>
+            <td>CPTS: 5811828</td>
+            <td>Série: 7807</td>
+            <td colspan="2">CPF: 481.337.138-89</td>
+        </tr>
+        <tr>
+            <td colspan="2">Função: AJUDANTE DE ESTOQUE</td>
+            <td colspan="2">Salário Nominal: R$ 1.933,20</td>
+        </tr>
+        <tr>
+            <td colspan="4">Centro de Custo: 10001047076 - SP - CAT - SAU - EDMUNDO VASCONCELOS - (GRSA)</td>
+        </tr>
+        <tr>
+            <td>Admissão: 03/10/2025</td>
+            <td>Dep. IR:</td>
+            <td colspan="2">Dep. Sal. Família:</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table class="tabela-lancamentos">
+        <thead>
+            <tr>
+                <th>Sequência</th>
+                <th>Código</th>
+                <th>Descrição</th>
+                <th>Referência</th>
+                <th>Valores</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0010</td><td>020</td><td>SALARIO</td><td>30.00</td><td>R$ 1.933,20 (+)</td></tr>
+            <tr><td>3928</td><td>I17</td><td>VT QUINZENA 1</td><td>0.00</td><td>R$ 231,40 (+)</td></tr>
+            <tr><td>3928</td><td>I18</td><td>VT QUINZENA 2</td><td>0.00</td><td>R$ 249,20 (+)</td></tr>
+            <tr><td>3928</td><td>I19</td><td>VT QUINZENA 3</td><td>0.00</td><td>R$ 231,40 (+)</td></tr>
+            <tr><td>7200</td><td>549</td><td>ASSISTENCIA MEDICA</td><td>0.00</td><td>R$ 80,58 (-)</td></tr>
+            <tr><td>7305</td><td>506</td><td>DESCONTO VR REFEITOR</td><td>0.00</td><td>R$ 29,00 (-)</td></tr>
+            <tr><td>7400</td><td>491</td><td>DESCONTO VT</td><td>0.00</td><td>R$ 115,99 (-)</td></tr>
+            <tr><td>7500</td><td>546</td><td>VALORES ANTECIPADOS</td><td>0.00</td><td>R$ 249,20 (-)</td></tr>
+            <tr><td>7500</td><td>546</td><td>VALORES ANTECIPADOS</td><td>0.00</td><td>R$ 231,40 (-)</td></tr>
+            <tr><td>7500</td><td>546</td><td>VALORES ANTECIPADOS</td><td>0.00</td><td>R$ 231,40 (-)</td></tr>
+            <tr><td>7800</td><td>401</td><td>INSS</td><td>0.00</td><td>R$ 151,21 (-)</td></tr>
+            <tr><td>7965</td><td>S42</td><td>DESC SEG VIDA</td><td>0.00</td><td>R$ 9,44 (-)</td></tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <table class="totais">
+        <tr>
+            <td class="label">TOTAL BRUTO</td>
+            <td class="right">R$ 2.645,20 (+)</td>
+        </tr>
+        <tr>
+            <td class="label">TOTAL DE DESCONTOS</td>
+            <td class="right">R$ 1.098,22 (-)</td>
+        </tr>
+        <tr>
+            <td class="liquido">LÍQUIDO A RECEBER</td>
+            <td class="right liquido">R$ 1.546,98 (=)</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <div class="base">
+        <table>
+            <tr><td class="bold">BASE FGTS</td><td class="right">R$ 1.933,20</td></tr>
+            <tr><td class="bold">VALOR FGTS</td><td class="right">R$ 154,65</td></tr>
+            <tr><td class="bold">BASE IRRF FOLHA</td><td class="right">R$ 1.933,20</td></tr>
+            <tr><td class="bold">BASE INSS</td><td class="right">R$ 1.933,20</td></tr>
+        </table>
+    </div>
+
+    <div class="rodape">
+        Válido como Comprovante Mensal de Rendimentos<br>
+        (Artigo no. 41 e 464 da CLT, Portaria MTPS/GM 3.626 de 13/11/1991)
+
+        <strong>Comunicamos a implantação do Canal de Ética GPS:</strong>
+        <a class="link" href="#">www.gpssa.com.br</a><br>
+        ou <strong>0800 049 4200</strong>
+    </div>
+
+</div>
+
 </body>
 </html>
